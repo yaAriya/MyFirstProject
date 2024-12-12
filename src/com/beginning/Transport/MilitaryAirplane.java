@@ -27,6 +27,9 @@ public class MilitaryAirplane extends Plane {
         } else{
             System.out.println("Не может быть отрицательное количество ракет!");
         }
-
+    }
+    @Override
+    public String toString(){
+        return super.toString() + ", " + getNumberOfGuns() + ", " + getNumberOfMissiles();
     }
 }

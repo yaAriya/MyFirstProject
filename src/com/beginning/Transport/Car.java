@@ -12,9 +12,8 @@ public class Car extends Transport {
     public void setNumberOfStopSignals(int numberOfStopSignals) {
         this.numberOfStopSignals = numberOfStopSignals;
     }
-    //public static void main(String[] args) {
-    //}
+    @Override
     public String toString(){
-        return getNumberOfWheels() + "," + getPower() + "," + getColor() + "," + getBrand() + "," + getMotorType() + "," + getNumberOfPassengerSeats()+ "," + getNumberOfStopSignals() + ".";
+        return super.toString() + "," + getNumberOfStopSignals();
     }
 }

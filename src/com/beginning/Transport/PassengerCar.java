@@ -14,4 +14,9 @@ public class PassengerCar extends Car {
     public void setNumberOfBackRows(int numberOfBackRows) {
         this.numberOfBackRows = numberOfBackRows;
     }
+    @Override
+    public String toString(){
+        return super.toString() + ", " + getNumberOfBackRows();
+    }
+
 }

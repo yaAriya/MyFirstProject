@@ -15,6 +15,9 @@ public class Trucks extends Car {
         } else {
             System.out.println("Упс, Кузовов не может быть меньше 0");
         }
-
+    }
+    @Override
+    public String toString(){
+        return super.toString() + ", " + getVehicleBody();
     }
 }

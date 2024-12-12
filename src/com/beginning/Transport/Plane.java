@@ -1,6 +1,6 @@
 package com.beginning.Transport;
 
-public class Plane extends Transport implements Cloneable{
+public class Plane extends Transport implements Cloneable {
     private int numberOfWings;
     private int numberOfPorthole;
     private int numberOfFlaps;
@@ -44,6 +44,6 @@ public class Plane extends Transport implements Cloneable{
         return (Plane) super.clone();
     }
     public String toString(){
-        return getNumberOfWheels() + "," + getPower() + "," + getColor() + "," + getBrand() + "," + getMotorType() + "," + getNumberOfPassengerSeats() + "," + getNumberOfWings() + "," + getNumberOfPorthole() + "," + getNumberOfFlaps()+ ".";
+        return super.toString() + ", " + getNumberOfWings() + "," + getNumberOfPorthole() + "," + getNumberOfFlaps()+ ".";
     }
 }

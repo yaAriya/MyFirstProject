@@ -5,8 +5,5 @@ public class MaxPowerComparator implements Comparator<Car>{
     public int compare (Car o1, Car o2){
         return o1.getPower() - o2.getPower();
     }
-    public void print (){
-
-    }
 
 }

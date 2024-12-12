@@ -65,6 +65,9 @@ public class Transport {
         } else{
             System.out.println("Увы, не может быть отрицательное количество поссажирских мест");
         }
-
+    }
+    @Override
+    public String toString(){
+        return getNumberOfWheels() + "," + getPower() + "," + getColor() + "," + getBrand() + "," + getMotorType() + "," + getNumberOfPassengerSeats();
     }
 }
