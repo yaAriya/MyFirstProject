@@ -8,6 +8,8 @@ public class Main implements Cloneable {
         List <Car> firstCarShowroom = new ArrayList();
         List <Plane> firstPlaneShowroom = new ArrayList();
         ArrayList<Car> secondCarShowroom = new ArrayList<>();
+        ArrayList<Car>  thirdCarShowroom = new ArrayList<>();
+        String MyFirstName = "Hello, my name is Aria and I love programming";
         //firstCarShowroom.add(new Car(4, 5, "black", "Audi", "petrol", 5, 4));
         //firstCarShowroom.add(new Car(4, 85, "grey", "BMW", "diesel", 4, 2));
         //firstCarShowroom.add(new Car(4, 300, "White", "Mercedes", "electricity", 5, 4));
