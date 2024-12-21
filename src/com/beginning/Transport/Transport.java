@@ -5,7 +5,6 @@ public class Transport {
     private int power;
     private String color;
     private String  brand;
-    //public String motorSize;
     private String motorType;
     private int numberOfPassengerSeats;
 
