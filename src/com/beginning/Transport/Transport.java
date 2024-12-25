@@ -10,7 +10,6 @@ public class Transport {
 
     public Transport (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber){
         this.wheelsNumber = wheelsNumber;
-        //setPower(power);
         this.power = power;
         this.color = color;
         this.brand = brand;
