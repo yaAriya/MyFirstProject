@@ -2,8 +2,8 @@ package com.beginning.Transport;
 
 public class Trucks extends Car {
     private int vehicleBody;
-    public Trucks (int numberOfWheels,int power, String color, String  brand, String motorType, int numberOfPassengerSeats, int numberOfStopSignals, int vehicleBody) {
-        super(numberOfWheels, power, color, brand, motorType, numberOfPassengerSeats, numberOfStopSignals);
+    public Trucks (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber, int vehicleBody) {
+        super(wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, stopSignalsNumber);
             this.vehicleBody = vehicleBody;
     }
     public int getVehicleBody() {
