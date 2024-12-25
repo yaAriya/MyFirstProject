@@ -1,41 +1,41 @@
 package com.beginning.Transport;
 
 public class Plane extends Transport implements Cloneable {
-    private int numberOfWings;
-    private int numberOfPorthole;
-    private int numberOfFlaps;
-    public Plane (int numberOfWheels, int power, String color, String  brand, String motorType, int numberOfPassengerSeats, int numberOfWings, int numberOfPorthole, int numberOfFlaps){
-        super(numberOfWheels, power, color, brand, motorType, numberOfPassengerSeats);
-        this.numberOfWings = numberOfWings;
-        this.numberOfPorthole = numberOfPorthole;
-        this.numberOfFlaps = numberOfFlaps;
+    private int wingsNumber;
+    private int portholeNumber;
+    private int flapsNumber;
+    public Plane (int wheelsNumber, int power, String color, String  brand, String motorType, int passengerSeatsNumber, int wingsNumber, int portholeNumber, int flapsNumber){
+        super(wheelsNumber, power, color, brand, motorType, passengerSeatsNumber);
+        this.wingsNumber = wingsNumber;
+        this.portholeNumber = portholeNumber;
+        this.flapsNumber = flapsNumber;
     }
-    public int getNumberOfWings() {
-        return numberOfWings;
+    public int getWingsNumber() {
+        return wingsNumber;
     }
-    public void setNumberOfWings(int numberOfWings) {
-        if (numberOfWings>=0){
-            this.numberOfWings = numberOfWings;
+    public void setWingsNumber(int wingsNumber) {
+        if (wingsNumber>=0){
+            this.wingsNumber = wingsNumber;
         } else {
             System.out.println("Произошла ошибка, крыльев не может быть отрицательное количество");
         }
     }
-    public int getNumberOfPorthole() {
-        return numberOfPorthole;
+    public int getPortholeNumber() {
+        return portholeNumber;
     }
-    public void setNumberOfPorthole(int numberOfPorthole) {
-        if (numberOfPorthole>=0){
-            this.numberOfPorthole = numberOfPorthole;
+    public void setPortholeNumber(int portholeNumber) {
+        if (portholeNumber>=0){
+            this.portholeNumber = portholeNumber;
         } else {
             System.out.println("Произошла ошибка, иллюминаторов не может быть отрицательное количество");
         }
     }
-    public int getNumberOfFlaps() {
-        return numberOfFlaps;
+    public int getFlapsNumber() {
+        return flapsNumber;
     }
-    public void setNumberOfFlaps(int numberOfFlaps) {
-        if (numberOfFlaps>=0){
-            this.numberOfFlaps = numberOfFlaps;
+    public void setFlapsNumber(int flapsNumber) {
+        if (flapsNumber>=0){
+            this.flapsNumber = flapsNumber;
         } else {
             System.out.println("Произошла ошибка, закрылок не может быть отрицательное количество");
         }
@@ -44,6 +44,6 @@ public class Plane extends Transport implements Cloneable {
         return (Plane) super.clone();
     }
     public String toString(){
-        return super.toString() + ", " + getNumberOfWings() + "," + getNumberOfPorthole() + "," + getNumberOfFlaps()+ ".";
+        return super.toString() + ", " + getWingsNumber() + "," + getPortholeNumber() + "," + getFlapsNumber()+ ".";
     }
 }

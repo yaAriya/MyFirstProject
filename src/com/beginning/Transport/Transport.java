@@ -1,28 +1,28 @@
 package com.beginning.Transport;
 
 public class Transport {
-    private int numberOfWheels;
+    private int wheelsNumber;
     private int power;
     private String color;
     private String  brand;
     private String motorType;
-    private int numberOfPassengerSeats;
+    private int passengerSeatsNumber;
 
-    public Transport (int numberOfWheels,int power, String color, String  brand, String motorType, int numberOfPassengerSeats){
-        this.numberOfWheels = numberOfWheels;
+    public Transport (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber){
+        this.wheelsNumber = wheelsNumber;
         //setPower(power);
         this.power = power;
         this.color = color;
         this.brand = brand;
         this.motorType = motorType;
-        this.numberOfPassengerSeats = numberOfPassengerSeats;
+        this.passengerSeatsNumber = passengerSeatsNumber;
     }
-    public int getNumberOfWheels(){
-        return numberOfWheels;
+    public int getWheelsNumber(){
+        return wheelsNumber;
     }
-    public void setNumberOfWheels(int numberOfWheels) {
-        if (numberOfWheels >= 0) {
-            this.numberOfWheels = numberOfWheels;
+    public void setWheelsNumber(int wheelsNumber) {
+        if (wheelsNumber >= 0) {
+            this.wheelsNumber = wheelsNumber;
         } else{
             System.out.println("Упс, произошла ошибка! Не может быть меньше 0 колес");
         }
@@ -55,18 +55,18 @@ public class Transport {
     public void setMotorType(String motorType) {
         this.motorType = motorType;
     }
-    public int getNumberOfPassengerSeats() {
-        return numberOfPassengerSeats;
+    public int getPassengerSeatsNumber() {
+        return passengerSeatsNumber;
     }
-    public void setNumberOfPassengerSeats(int numberOfPassengerSeats) {
-        if(numberOfPassengerSeats>= 0){
-            this.numberOfPassengerSeats = numberOfPassengerSeats;
+    public void setPassengerSeatsNumber (int passengerSeatsNumber) {
+        if(passengerSeatsNumber>= 0){
+            this.passengerSeatsNumber = passengerSeatsNumber;
         } else{
             System.out.println("Увы, не может быть отрицательное количество поссажирских мест");
         }
     }
     @Override
     public String toString(){
-        return getNumberOfWheels() + "," + getPower() + "," + getColor() + "," + getBrand() + "," + getMotorType() + "," + getNumberOfPassengerSeats();
+        return getWheelsNumber()+ "," + getPower() + "," + getColor() + "," + getBrand() + "," + getMotorType() + "," + getPassengerSeatsNumber();
     }
 }

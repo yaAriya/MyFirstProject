@@ -1,35 +1,35 @@
 package com.beginning.Transport;
 
 public class MilitaryAirplane extends Plane {
-    private int numberOfGuns;
-    private int numberOfMissiles;
-    public MilitaryAirplane (int numberOfWheels, int power, String color, String  brand, String motorType, int numberOfPassengerSeats, int numberOfWings, int numberOfPorthole, int numberOfFlaps, int numberOfGuns, int numberOfMissiles){
-        super (numberOfWheels, power, color, brand, motorType, numberOfPassengerSeats, numberOfWings, numberOfPorthole, numberOfFlaps);
-        this.numberOfGuns = numberOfGuns;
-        this.numberOfMissiles = numberOfMissiles;
+    private int gunsNumber;
+    private int missilesNumber;
+    public MilitaryAirplane (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int wingsNumber, int portholeNumber, int flapsNumber, int gunsNumber, int missilesNumber){
+        super (wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, wingsNumber, portholeNumber, flapsNumber);
+        this.gunsNumber = gunsNumber;
+        this.missilesNumber = missilesNumber;
     }
-    public int getNumberOfGuns() {
-        return numberOfGuns;
+    public int getGunsNumber() {
+        return gunsNumber;
     }
-    public void setNumberOfGuns(int numberOfGuns) {
-        if (numberOfGuns>=0){
-            this.numberOfGuns = numberOfGuns;
+    public void setGunsNumber(int gunsNumber) {
+        if (gunsNumber>=0){
+            this.gunsNumber = gunsNumber;
         } else{
             System.out.println("Не может быть отрицательное количество пушек!");
         }
     }
-    public int getNumberOfMissiles() {
-        return numberOfMissiles;
+    public int getMissilesNumber() {
+        return missilesNumber;
     }
-    public void setNumberOfMissiles(int numberOfMissiles) {
-        if (numberOfMissiles>=0){
-            this.numberOfMissiles = numberOfMissiles;
+    public void setMissilesNumber(int missilesNumber) {
+        if (missilesNumber>=0){
+            this.missilesNumber = missilesNumber;
         } else{
             System.out.println("Не может быть отрицательное количество ракет!");
         }
     }
     @Override
     public String toString(){
-        return super.toString() + ", " + getNumberOfGuns() + ", " + getNumberOfMissiles();
+        return super.toString() + ", " + getGunsNumber() + ", " + getMissilesNumber();
     }
 }

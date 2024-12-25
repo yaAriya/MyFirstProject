@@ -1,19 +1,19 @@
 package com.beginning.Transport;
 
 public class Car extends Transport {
-    private  int numberOfStopSignals;
-    public Car (int numberOfWheels,int power, String color, String  brand, String motorType, int numberOfPassengerSeats, int numberOfStopSignals){
-        super(numberOfWheels, power, color, brand, motorType, numberOfPassengerSeats);
-        this.numberOfStopSignals = numberOfStopSignals;
+    private  int stopSignalsNumber;
+    public Car (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber){
+        super(wheelsNumber, power, color, brand, motorType, passengerSeatsNumber);
+        this.stopSignalsNumber = stopSignalsNumber;
     }
-    public int getNumberOfStopSignals() {
-        return numberOfStopSignals;
+    public int getStopSignalsNumber() {
+        return stopSignalsNumber;
     }
-    public void setNumberOfStopSignals(int numberOfStopSignals) {
-        this.numberOfStopSignals = numberOfStopSignals;
+    public void setStopSignalsNumber(int stopSignalsNumber) {
+        this.stopSignalsNumber = stopSignalsNumber;
     }
     @Override
     public String toString(){
-        return super.toString() + "," + getNumberOfStopSignals();
+        return super.toString() + "," + getStopSignalsNumber();
     }
 }
