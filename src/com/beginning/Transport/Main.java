@@ -1,14 +1,18 @@
 package com.beginning.Transport;
 
 import java.util.Comparator;
+
 import java.util.List;
+
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException{
         TransportInitializer transportInitializer = new TransportInitializer();
+
         List <Plane> firstPlaneShowroom = transportInitializer.initializerPlane();
         for(int i =0; i<firstPlaneShowroom.size(); i++) {
             System.out.println("Первый массив самолетов " + (i+1) + ": " +  transportInitializer.initializerPlane() );
         }
+
         List <Car> firstCarShowroom = transportInitializer.initializerCar();
         for (int i=0; i<firstPlaneShowroom.size(); i ++) {
             System.out.println("Первый массив машин "+(i+1)+ ": "+ transportInitializer.initializerCar());
