@@ -1,4 +1,6 @@
-package com.beginning.Transport;
+package com.beginning.Transport.PassengerCar;
+
+import com.beginning.Transport.Car.Car;
 
 public class PassengerCar extends Car {
         private int backRowsNumber;

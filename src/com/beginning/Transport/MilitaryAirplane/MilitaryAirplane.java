@@ -1,4 +1,6 @@
-package com.beginning.Transport;
+package com.beginning.Transport.MilitaryAirplane;
+
+import com.beginning.Transport.Plane.Plane;
 
 public class MilitaryAirplane extends Plane {
     private int gunsNumber;

@@ -1,4 +1,6 @@
-package com.beginning.Transport;
+package com.beginning.Transport.Comparator;
+
+import com.beginning.Transport.Car.Car;
 
 import java.util.Comparator;
 

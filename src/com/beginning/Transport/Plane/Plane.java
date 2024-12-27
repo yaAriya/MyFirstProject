@@ -1,4 +1,6 @@
-package com.beginning.Transport;
+package com.beginning.Transport.Plane;
+
+import com.beginning.Transport.Transport.Transport;
 
 public class Plane extends Transport implements Cloneable {
     private int wingsNumber;
