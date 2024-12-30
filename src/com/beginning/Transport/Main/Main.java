@@ -4,9 +4,9 @@ import com.beginning.Transport.Car.Car;
 
 import com.beginning.Transport.CarFilter.CarFilter;
 
-import com.beginning.Transport.Comparator.MaxPowerComparator;
+import com.beginning.Transport.MinCarPowerComparator.MinCarPowerComparator;
 
-import com.beginning.Transport.MinPassengerSeatsComparator.MinPassengerSeatsComparator;
+import com.beginning.Transport.MinCarPassengerSeatsComparator.MinCarPassengerSeatsComparator;
 
 import com.beginning.Transport.Plane.Plane;
 
@@ -28,11 +28,11 @@ public class Main {
         Printer.printFirstCarShowroom(firstCarShowroom);
         Printer.printFirstPlaneShowroom(firstPlaneShowroom);
 
-        Comparator <Car> maxCarPowerComparator = new MaxPowerComparator();
-        firstCarShowroom.sort(maxCarPowerComparator);
+        Comparator <Car> minCarPowerComparator = new MinCarPowerComparator();
+        firstCarShowroom.sort(minCarPowerComparator);
         Printer.printSortingCarsByPower(firstCarShowroom);
 
-        Comparator <Car> minCarPassegerSeatsNumberComparator = new MinPassengerSeatsComparator();
+        Comparator <Car> minCarPassegerSeatsNumberComparator = new MinCarPassengerSeatsComparator();
         firstCarShowroom.sort(minCarPassegerSeatsNumberComparator);
         Printer.printSortingCarsByPassengerSeats(firstCarShowroom);
 
