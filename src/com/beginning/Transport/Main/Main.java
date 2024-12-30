@@ -2,7 +2,11 @@ package com.beginning.Transport.Main;
 
 import com.beginning.Transport.Car.Car;
 
+import com.beginning.Transport.CarFilter.CarFilter;
+
 import com.beginning.Transport.Comparator.MaxPowerComparator;
+
+import com.beginning.Transport.MinPassengerSeatsComparator.MinPassengerSeatsComparator;
 
 import com.beginning.Transport.Plane.Plane;
 
@@ -23,9 +27,17 @@ public class Main {
 
         Printer.printFirstCarShowroom(firstCarShowroom);
         Printer.printFirstPlaneShowroom(firstPlaneShowroom);
-        Comparator <Car> powerComparator = new MaxPowerComparator();
-        firstCarShowroom.sort(powerComparator);
+
+        Comparator <Car> maxCarPowerComparator = new MaxPowerComparator();
+        firstCarShowroom.sort(maxCarPowerComparator);
         Printer.printSortingCarsByPower(firstCarShowroom);
+
+        Comparator <Car> minCarPassegerSeatsNumberComparator = new MinPassengerSeatsComparator();
+        firstCarShowroom.sort(minCarPassegerSeatsNumberComparator);
+        Printer.printSortingCarsByPassengerSeats(firstCarShowroom);
+
+        List <Car> filteredByPassengerSeatsNumberFirstCarShowroom = CarFilter.CarFilterByPassengerSeatsNumber(firstCarShowroom);
+        Printer.printCarFilterByPassengerSeatsNumber(filteredByPassengerSeatsNumberFirstCarShowroom);
 
     }
 }
