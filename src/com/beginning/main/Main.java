@@ -31,8 +31,8 @@ public class Main {
         firstCarShowroom.sort(minCarPassegerSeatsNumberComparator);
         Printer.printSortingCarsByPassengerSeats(firstCarShowroom);
 
-        List <Car> filteredByPassengerSeatsNumberFirstCarShowroom = CarFilter.CarFilterByPassengerSeatsNumber(firstCarShowroom);
-        Printer.printCarFilterByPassengerSeatsNumber(filteredByPassengerSeatsNumberFirstCarShowroom);
+        List <Car> carsFilteredByPassengerSeatsNumber = CarFilter.filterCarByPassengerSeatsNumber(firstCarShowroom);
+        Printer.printCarFilterByPassengerSeatsNumber(carsFilteredByPassengerSeatsNumber);
 
     }
 }

@@ -7,14 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarFilter {
-    public static List<Car> CarFilterByPassengerSeatsNumber(List<Car> firstCarShowroom) {
+    public static List<Car> filterCarByPassengerSeatsNumber(List<Car> carsFilteredByPassengerSeatsNumber) {
 
-        List<Car> filteredByPassengerSeatsNumberFirstCarShowroom = new ArrayList<>();
-
-        for (int i = 0; i < firstCarShowroom.size(); i++) {
-            Car counter = firstCarShowroom.get(i);
-           if (counter.getPassengerSeatsNumber()>4){
-               filteredByPassengerSeatsNumberFirstCarShowroom.add(firstCarShowroom.get(i));
+        List<Car> filteredByPassengerSeatsNumberFirstCarShowroom= new ArrayList<>();
+        for (int i = 0; i < carsFilteredByPassengerSeatsNumber.size(); i++) {
+            Car counter = carsFilteredByPassengerSeatsNumber.get(i);
+           if (counter.getPassengerSeatsNumber()>3){
+               filteredByPassengerSeatsNumberFirstCarShowroom.add(counter);
            }
         }
         return filteredByPassengerSeatsNumberFirstCarShowroom;

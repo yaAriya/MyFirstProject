@@ -31,9 +31,9 @@ public class Printer {
         }
     }
 
-    public static void  printCarFilterByPassengerSeatsNumber(List<Car> filteredByPassengerSeatsNumberFirstCarShowroom){
-        for(int i = 0; i < filteredByPassengerSeatsNumberFirstCarShowroom.size(); i++){
-            System.out.println("Сортировка машин по минимальному количеству сидений с заданным параметром : Nᵒ" + (i + 1) + ": " + filteredByPassengerSeatsNumberFirstCarShowroom.get(i));
+    public static void  printCarFilterByPassengerSeatsNumber(List<Car> carsFilteredByPassengerSeatsNumber){
+        for(int i = 0; i < carsFilteredByPassengerSeatsNumber.size(); i++){
+            System.out.println("Сортировка машин по минимальному количеству сидений с заданным параметром : Nᵒ" + (i + 1) + ": " + carsFilteredByPassengerSeatsNumber.get(i));
         }
     }
 }
