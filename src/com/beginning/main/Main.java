@@ -1,10 +1,15 @@
 package com.beginning.main;
 
 import com.beginning.filter.CarFilter;
+
 import com.beginning.comporator.MinCarPassengerSeatsComparator;
+
 import com.beginning.comporator.MinCarPowerComparator;
+
 import com.beginning.entity.Plane;
+
 import com.beginning.printer.Printer;
+
 import com.beginning.entity.Car;
 
 import com.beginning.initializer.TransportInitializer;

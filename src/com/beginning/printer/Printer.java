@@ -1,6 +1,7 @@
 package com.beginning.printer;
 
 import com.beginning.entity.Plane;
+
 import com.beginning.entity.Car;
 
 import java.util.List;
