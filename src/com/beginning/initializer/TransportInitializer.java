@@ -1,8 +1,7 @@
-package com.beginning.Transport.TransportInitializer;
+package com.beginning.initializer;
 
-import com.beginning.Transport.Car.Car;
-
-import com.beginning.Transport.Plane.Plane;
+import com.beginning.entity.Plane;
+import com.beginning.entity.Car;
 
 import java.util.ArrayList;
 

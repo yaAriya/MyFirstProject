@@ -1,6 +1,6 @@
-package com.beginning.Transport.Car;
+package com.beginning.entity;
 
-import com.beginning.Transport.Transport.Transport;
+import com.beginning.entity.Transport;
 
 public class Car extends Transport {
     private  int stopSignalsNumber;

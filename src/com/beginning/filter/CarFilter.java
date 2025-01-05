@@ -1,13 +1,13 @@
-package com.beginning.Transport.CarFilter;
+package com.beginning.filter;
 
-import com.beginning.Transport.Car.Car;
+import com.beginning.entity.Car;
 
 import java.util.ArrayList;
 
 import java.util.List;
 
 public class CarFilter {
-    public static List <Car> CarFilterByPassengerSeatsNumber(List<Car> firstCarShowroom) {
+    public static List<Car> CarFilterByPassengerSeatsNumber(List<Car> firstCarShowroom) {
 
         List<Car> filteredByPassengerSeatsNumberFirstCarShowroom = new ArrayList<>();
 

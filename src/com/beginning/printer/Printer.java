@@ -1,8 +1,7 @@
-package com.beginning.Transport.Printer;
+package com.beginning.printer;
 
-import com.beginning.Transport.Car.Car;
-
-import com.beginning.Transport.Plane.Plane;
+import com.beginning.entity.Plane;
+import com.beginning.entity.Car;
 
 import java.util.List;
 

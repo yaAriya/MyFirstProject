@@ -1,18 +1,13 @@
-package com.beginning.Transport.Main;
+package com.beginning.main;
 
-import com.beginning.Transport.Car.Car;
+import com.beginning.filter.CarFilter;
+import com.beginning.comporator.MinCarPassengerSeatsComparator;
+import com.beginning.comporator.MinCarPowerComparator;
+import com.beginning.entity.Plane;
+import com.beginning.printer.Printer;
+import com.beginning.entity.Car;
 
-import com.beginning.Transport.CarFilter.CarFilter;
-
-import com.beginning.Transport.MinCarPowerComparator.MinCarPowerComparator;
-
-import com.beginning.Transport.MinCarPassengerSeatsComparator.MinCarPassengerSeatsComparator;
-
-import com.beginning.Transport.Plane.Plane;
-
-import com.beginning.Transport.Printer.Printer;
-
-import com.beginning.Transport.TransportInitializer.TransportInitializer;
+import com.beginning.initializer.TransportInitializer;
 
 import java.util.Comparator;
 

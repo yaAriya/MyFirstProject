@@ -1,6 +1,6 @@
-package com.beginning.Transport.PassengerCar;
+package com.beginning.entity;
 
-import com.beginning.Transport.Car.Car;
+import com.beginning.entity.Car;
 
 public class PassengerCar extends Car {
         private int backRowsNumber;

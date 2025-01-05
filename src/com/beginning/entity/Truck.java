@@ -1,6 +1,6 @@
-package com.beginning.Transport.Truck;
+package com.beginning.entity;
 
-import com.beginning.Transport.Car.Car;
+import com.beginning.entity.Car;
 
 public class Truck extends Car {
     private int vehicleBody;

@@ -1,8 +1,8 @@
-package com.beginning.Transport.MinCarPassengerSeatsComparator;
+package com.beginning.comporator;
 
 import java.util.Comparator;
 
-import com.beginning.Transport.Car.Car;
+import com.beginning.entity.Car;
 
 public class MinCarPassengerSeatsComparator implements Comparator<Car> {
 

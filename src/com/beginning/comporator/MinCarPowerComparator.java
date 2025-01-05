@@ -1,6 +1,6 @@
-package com.beginning.Transport.MinCarPowerComparator;
+package com.beginning.comporator;
 
-import com.beginning.Transport.Car.Car;
+import com.beginning.entity.Car;
 
 import java.util.Comparator;
 

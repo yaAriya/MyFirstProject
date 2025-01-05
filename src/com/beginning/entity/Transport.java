@@ -1,4 +1,4 @@
-package com.beginning.Transport.Transport;
+package com.beginning.entity;
 
 public class Transport {
     private int wheelsNumber;
