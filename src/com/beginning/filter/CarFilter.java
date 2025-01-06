@@ -11,20 +11,19 @@ public class CarFilter {
 
         List<Car> filteredByPassengerSeatsNumberFirstCarShowroom= new ArrayList<>();
         for (int i = 0; i < carsFilteredByPassengerSeatsNumber.size(); i++) {
-            Car counter = carsFilteredByPassengerSeatsNumber.get(i);
-           if (counter.getPassengerSeatsNumber()>3){
-               filteredByPassengerSeatsNumberFirstCarShowroom.add(counter);
+            Car car = carsFilteredByPassengerSeatsNumber.get(i);
+           if (car.getPassengerSeatsNumber()>3){
+               filteredByPassengerSeatsNumberFirstCarShowroom.add(car);
            }
         }
         return filteredByPassengerSeatsNumberFirstCarShowroom;
     }
-    
     public static List<Car> filterCarByPower(List<Car> carsFilteredByPower){
         List<Car> filteredByPowerCar = new ArrayList<>();
         for (int i = 0; i < carsFilteredByPower.size(); i ++){
-            Car counter = carsFilteredByPower.get(i);
-            if (counter.getPower() < 380) {
-                filteredByPowerCar.add(counter);
+            Car car = carsFilteredByPower.get(i);
+            if (car.getPower() < 380) {
+                filteredByPowerCar.add(car);
             }
         }
         return filteredByPowerCar;
