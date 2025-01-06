@@ -18,4 +18,15 @@ public class CarFilter {
         }
         return filteredByPassengerSeatsNumberFirstCarShowroom;
     }
+    
+    public static List<Car> filterCarByPower(List<Car> carsFilteredByPower){
+        List<Car> filteredByPowerCar = new ArrayList<>();
+        for (int i = 0; i < carsFilteredByPower.size(); i ++){
+            Car counter = carsFilteredByPower.get(i);
+            if (counter.getPower() < 380) {
+                filteredByPowerCar.add(counter);
+            }
+        }
+        return filteredByPowerCar;
+    }
 }

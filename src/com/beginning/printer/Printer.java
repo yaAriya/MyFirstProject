@@ -32,9 +32,15 @@ public class Printer {
         }
     }
 
-    public static void  printCarFilterByPassengerSeatsNumber(List<Car> carsFilteredByPassengerSeatsNumber){
+    public static void printCarFilterByPassengerSeatsNumber(List<Car> carsFilteredByPassengerSeatsNumber){
         for(int i = 0; i < carsFilteredByPassengerSeatsNumber.size(); i++){
             System.out.println("Сортировка машин по минимальному количеству сидений с заданным параметром : Nᵒ" + (i + 1) + ": " + carsFilteredByPassengerSeatsNumber.get(i));
+        }
+    }
+
+    public static void printCarFilterByPower(List<Car> carsFilteredByPower){
+        for (int i = 0; i < carsFilteredByPower.size(); i ++){
+            System.out.println("Сортировка машин по минимальной мощности с заданным параметром : Nᵒ" + (i + 1) + ": " + carsFilteredByPower.get(i));
         }
     }
 }

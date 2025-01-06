@@ -39,5 +39,8 @@ public class Main {
         List <Car> carsFilteredByPassengerSeatsNumber = CarFilter.filterCarByPassengerSeatsNumber(firstCarShowroom);
         Printer.printCarFilterByPassengerSeatsNumber(carsFilteredByPassengerSeatsNumber);
 
+        List <Car> carsFilteredByPower = CarFilter.filterCarByPower(firstCarShowroom);
+        Printer.printCarFilterByPower(carsFilteredByPower);
+
     }
 }
