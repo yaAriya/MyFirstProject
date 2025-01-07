@@ -12,7 +12,7 @@ public class TransportInitializer implements Cloneable {
     public List <Car> initializerCar(){
         List<Car> firstCarShowroom = new ArrayList();
 
-        Car firstCar = new Car(4, 5, "black", "Audi", "petrol", 5, 4);
+        Car firstCar = new Car(4, 249, "black", "Audi", "petrol", 5, 4);
         Car secondCar =  new Car(4, 85, "grey", "BMW", "diesel", 4, 2);
         Car thirdCar = new Car(4, 300, "White", "Mercedes", "electricity", 5, 4);
 
