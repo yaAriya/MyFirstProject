@@ -2,6 +2,8 @@ package com.beginning.entity;
 
 import com.beginning.entity.Plane;
 
+import java.util.Objects;
+
 public class MilitaryAirplane extends Plane {
     private int gunsNumber;
     private int missilesNumber;
@@ -37,7 +39,20 @@ public class MilitaryAirplane extends Plane {
     }
 
     @Override
+    public int hashCode(){
+        return Objects.hash(super.hashCode(),missilesNumber,gunsNumber);
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(!(obj instanceof MilitaryAirplane)) return false;
+        MilitaryAirplane militaryAirplane = (MilitaryAirplane) obj;
+        return super.equals(obj) && missilesNumber == militaryAirplane .missilesNumber && gunsNumber == militaryAirplane.gunsNumber;
+
+    }
+
+    @Override
     public String toString(){
-        return super.toString() + ", " + getGunsNumber() + ", " + getMissilesNumber();
+        return super.toString() + ", " + gunsNumber + ", " + missilesNumber;
     }
 }

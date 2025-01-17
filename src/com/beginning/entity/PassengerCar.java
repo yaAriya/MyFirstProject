@@ -2,6 +2,8 @@ package com.beginning.entity;
 
 import com.beginning.entity.Car;
 
+import java.util.Objects;
+
 public class PassengerCar extends Car {
         private int backRowsNumber;
 
@@ -19,7 +21,19 @@ public class PassengerCar extends Car {
     }
 
     @Override
+    public int hashCode(){
+        return Objects.hash(super.hashCode(),backRowsNumber);
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(!(obj instanceof PassengerCar)) return false;
+        PassengerCar passengerCar = (PassengerCar) obj;
+        return super.equals(obj) && backRowsNumber == passengerCar.backRowsNumber;
+    }
+
+    @Override
     public String toString(){
-        return super.toString() + ", " + getBackRowsNumber();
+        return super.toString() + ", " + backRowsNumber;
     }
 }

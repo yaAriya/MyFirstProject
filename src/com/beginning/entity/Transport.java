@@ -1,6 +1,9 @@
 package com.beginning.entity;
 
+import java.util.Objects;
+
 public class Transport {
+    private int ID;
     private int wheelsNumber;
     private int power;
     private String color;
@@ -78,7 +81,20 @@ public class Transport {
     }
 
     @Override
+    public int hashCode(){
+        return Objects.hash(wheelsNumber,power, color, brand, motorType, passengerSeatsNumber);
+    }
+
+    public boolean equals(Object obj){
+        if (this == obj) return true;
+        if(obj == null || !(obj instanceof Transport)) return false;
+        // if (obj == null ||obj.getClass() != this.getClass()) return false;
+            Transport transport = (Transport) obj;
+        return wheelsNumber == transport.wheelsNumber && power == transport.power && Objects.equals(color, transport.color) && Objects.equals(brand, transport.brand) && Objects.equals(motorType,transport.motorType) && passengerSeatsNumber == transport.passengerSeatsNumber;
+    }
+
+    @Override
     public String toString(){
-        return getWheelsNumber()+ "," + getPower() + "," + getColor() + "," + getBrand() + "," + getMotorType() + "," + getPassengerSeatsNumber();
+        return wheelsNumber + "," + power + "," + color + "," + brand + "," + motorType + "," + passengerSeatsNumber;
     }
 }

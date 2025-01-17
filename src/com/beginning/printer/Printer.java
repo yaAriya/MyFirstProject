@@ -3,6 +3,7 @@ package com.beginning.printer;
 import com.beginning.entity.Plane;
 
 import com.beginning.entity.Car;
+import com.beginning.entity.Transport;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class Printer {
     private static final String carsSortingByPassengerSeatsMessage = "Сортирока машин по минимальному количеству сидений: Nᵒ%s: %s";
     private static final String carsFilteredByPassengerSeatsNumberMessage = "Сортировка машин по минимальному количеству сидений с заданным параметром: Nᵒ%s: %s";
     private static final String carsFilteredByPowerMessage = "Сортировка машин по минимальной мощности с заданным параметром: Nᵒ%s: %s";
+    private static final String firstTransportShowroomMessage = "Каталог салона транспортов: Nᵒ%s: %s";
 
     public static void printFirstCarShowroom (List<Car> firstCarShowroom){
         printCars(firstCarShowroom, firstCarShowroomMessage);
@@ -20,6 +22,10 @@ public class Printer {
 
     public static void printFirstPlaneShowroom(List <Plane> firstPlaneShowroom){
         printPlane(firstPlaneShowroom, firstPlaneShowroomMessage);
+    }
+
+    public static void printFirstTransportShowroom(List<Transport> firstTransportShowroom){
+        printTransport(firstTransportShowroom, firstTransportShowroomMessage);
     }
 
     public static void printSortingCarsByPower(List<Car> carsSortingByPower) {
@@ -49,40 +55,19 @@ public class Printer {
             System.out.println(String.format(message, i + 1, planes.get(i)));
         }
     }
-
-   /* public static void printFirstCarShowroom (List<Car> firstCarShowroom){
-        for (int i = 0; i < firstCarShowroom.size(); i++ ){
-            System.out.println("Каталог салона машин: Nᵒ" + (i+1) + ": " +firstCarShowroom.get(i));
+    private static void printTransport(List<Transport> transports, String message){
+        for (int i = 0; i < transports.size(); i++){
+            System.out.println(String.format(message, i+1, transports.get(i)));
         }
     }
-
-    public static void printFirstPlaneShowroom(List <Plane> firstPlaneShowroom){
-        for (int i=0; i < firstPlaneShowroom.size(); i++){
-            System.out.println("Каталог салона самолетов: Nᵒ" + (i+1) + firstPlaneShowroom.get(i));
-        }
-    }
-
-    public static void printSortingCarsByPower(List<Car> carsSortingByPower) {
-        for (int i = 0; i < carsSortingByPower.size(); i++) {
-            System.out.println("Сортировка машин по минимальной мощности: " + "Nᵒ" + (i+1) + ": " + carsSortingByPower.get(i));
-        }
-    }
-
-    public static void printSortingCarsByPassengerSeats(List <Car> carsSortingByPassengerSeats){
-        for(int i = 0; i < carsSortingByPassengerSeats.size(); i++) {
-            System.out.println("Сортирока машин по минимальному количеству сидений : Nᵒ" + (i + 1) + ": " + carsSortingByPassengerSeats.get(i));
-        }
-    }
-
-    public static void printCarFilterByPassengerSeatsNumber(List<Car> carsFilteredByPassengerSeatsNumber){
-        for(int i = 0; i < carsFilteredByPassengerSeatsNumber.size(); i++){
-            System.out.println("Сортировка машин по минимальному количеству сидений с заданным параметром : Nᵒ" + (i + 1) + ": " + carsFilteredByPassengerSeatsNumber.get(i));
-        }
-    }
-
-    public static void printCarFilterByPower(List<Car> carsFilteredByPower){
-        for (int i = 0; i < carsFilteredByPower.size(); i ++){
-            System.out.println("Сортировка машин по минимальной мощности с заданным параметром : Nᵒ" + (i + 1) + ": " + carsFilteredByPower.get(i));
-        }
-    }*/
 }
+/* private static final String ComparingFirstCarAndFirstTransport = "Сравнение выбранных вами объектов: ";
+
+    public static void printComparingFirstCarAndFirstTransport(List<Car> firstCarShowroom, List<Transport> firstTransportShowroom) {
+        if(firstCar.equals(firstTransport)){
+            System.out.println("Equal");
+        } else{
+            System.out.println("Not equal");
+        }
+        System.out.println((firstCar.equals(firstTransport)));
+    }*/

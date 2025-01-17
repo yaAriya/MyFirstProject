@@ -4,11 +4,21 @@ import com.beginning.entity.Plane;
 
 import com.beginning.entity.Car;
 
+import com.beginning.entity.Transport;
+
 import java.util.ArrayList;
 
 import java.util.List;
 
 public class TransportInitializer implements Cloneable {
+    public List <Transport> initializerTransport(){
+        List<Transport> firstTransportShowroom = new ArrayList<>();
+
+        Transport firstTransport = new Transport(4, 87, "black", "Audi", "petrol", 5);
+
+        return firstTransportShowroom;
+    }
+
     public List <Car> initializerCar(){
         List<Car> firstCarShowroom = new ArrayList();
 
@@ -22,6 +32,7 @@ public class TransportInitializer implements Cloneable {
 
         return firstCarShowroom;
     }
+
     public List <Plane> initializerPlane() throws CloneNotSupportedException{
         List <Plane> firstPlaneShowroom = new ArrayList();
 
@@ -35,6 +46,7 @@ public class TransportInitializer implements Cloneable {
 
             return firstPlaneShowroom;
     }
+
     protected Object clone() throws CloneNotSupportedException{
         return super.clone();
     }

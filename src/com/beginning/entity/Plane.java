@@ -1,5 +1,7 @@
 package com.beginning.entity;
 
+import java.util.Objects;
+
 public class Plane extends Transport implements Cloneable {
     private int wingsNumber;
     private int portholeNumber;
@@ -48,11 +50,25 @@ public class Plane extends Transport implements Cloneable {
         }
     }
 
-    public Plane clone() throws CloneNotSupportedException{
+    public Plane clone() throws CloneNotSupportedException{ //protected
         return (Plane) super.clone();
     }
 
-    public String toString(){
-        return super.toString() + ", " + getWingsNumber() + "," + getPortholeNumber() + "," + getFlapsNumber()+ ".";
+    @Override
+   public int hashCode(){
+        return Objects.hash(super.hashCode(),wingsNumber,portholeNumber,flapsNumber);
     }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Plane) return false;
+        Plane plane = (Plane) obj;
+        return  super.equals(obj) && wingsNumber == plane.wingsNumber && portholeNumber == plane.portholeNumber && flapsNumber == plane.flapsNumber;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + ", " + wingsNumber + "," + portholeNumber + "," + flapsNumber + ".";
+    }
+
 }

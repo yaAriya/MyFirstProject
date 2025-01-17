@@ -2,6 +2,8 @@ package com.beginning.entity;
 
 import com.beginning.entity.Car;
 
+import java.util.Objects;
+
 public class Truck extends Car {
     private int vehicleBody;
 
@@ -23,7 +25,19 @@ public class Truck extends Car {
     }
 
     @Override
+    public int hashCode(){
+        return Objects.hash(super.hashCode(),vehicleBody);
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(!(obj instanceof Truck)) return false;
+        Truck truck = (Truck) obj;
+        return super.equals(obj) && vehicleBody == truck.vehicleBody;
+    }
+
+    @Override
     public String toString(){
-        return super.toString() + ", " + getVehicleBody();
+        return super.toString() + ", " + vehicleBody;
     }
 }

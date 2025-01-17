@@ -1,6 +1,6 @@
 package com.beginning.entity;
 
-import com.beginning.entity.Transport;
+import java.util.Objects;
 
 public class Car extends Transport {
     private  int stopSignalsNumber;
@@ -19,7 +19,18 @@ public class Car extends Transport {
     }
 
     @Override
+    public int hashCode(){
+        return Objects.hash(super.hashCode(),stopSignalsNumber);
+    }
+
+    public boolean equals(Object obj){
+        if (!(obj instanceof Car)) return false;
+        Car car = (Car) obj;
+        return super.equals(obj) && stopSignalsNumber == car.stopSignalsNumber;
+    }
+
+    @Override
     public String toString(){
-        return super.toString() + "," + getStopSignalsNumber();
+        return super.toString() + "," + stopSignalsNumber;
     }
 }
