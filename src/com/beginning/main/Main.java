@@ -50,18 +50,22 @@ public class Main {
         List<Transport> firstTransportShowroom = transportInitializer.initializerTransport();
         Printer.printFirstTransportShowroom(firstTransportShowroom);
 
-        int IDOfObject = 134;
-        int resultForTransport = SearchEngine.findIndexOfObjectFromTransport(firstTransportShowroom, IDOfObject);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите ID объекта");
+        int IDOfObjectByUser = scanner.nextInt(); //134
+        scanner.close();
+
+        int resultForTransport = SearchEngine.findIndexOfObjectFromTransport(firstTransportShowroom, IDOfObjectByUser);
         if(resultForTransport>-1){
             System.out.println(firstTransportShowroom.get(resultForTransport));
         } else {
             System.out.println("Среди транспортов такого объекта нет");
-            int resultForCars = SearchEngine.findIndexOfObjectFromCars(firstCarShowroom, IDOfObject);
+            int resultForCars = SearchEngine.findIndexOfObjectFromCars(firstCarShowroom, IDOfObjectByUser);
             if (resultForCars > -1) {
                 System.out.println(firstCarShowroom.get(resultForCars));
             } else {
                 System.out.println("Среди машин такого объекта нет");
-                int resultForPlanes = SearchEngine.findIndexOfObjectFromPlanes(firstPlaneShowroom, IDOfObject);
+                int resultForPlanes = SearchEngine.findIndexOfObjectFromPlanes(firstPlaneShowroom, IDOfObjectByUser);
                 if (resultForPlanes > -1) {
                     System.out.println(firstPlaneShowroom.get(resultForPlanes));
                 } else {
