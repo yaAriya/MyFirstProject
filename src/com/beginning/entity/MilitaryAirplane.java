@@ -8,8 +8,8 @@ public class MilitaryAirplane extends Plane {
     private int gunsNumber;
     private int missilesNumber;
 
-    public MilitaryAirplane (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int wingsNumber, int portholeNumber, int flapsNumber, int gunsNumber, int missilesNumber){
-        super (wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, wingsNumber, portholeNumber, flapsNumber);
+    public MilitaryAirplane (int ID, int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int wingsNumber, int portholeNumber, int flapsNumber, int gunsNumber, int missilesNumber){
+        super (ID, wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, wingsNumber, portholeNumber, flapsNumber);
         this.gunsNumber = gunsNumber;
         this.missilesNumber = missilesNumber;
     }

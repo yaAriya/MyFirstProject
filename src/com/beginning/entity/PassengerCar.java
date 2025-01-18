@@ -7,8 +7,8 @@ import java.util.Objects;
 public class PassengerCar extends Car {
         private int backRowsNumber;
 
-    public PassengerCar (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber, int backRowsNumber){
-        super(wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, stopSignalsNumber);
+    public PassengerCar (int ID, int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber, int backRowsNumber){
+        super(ID, wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, stopSignalsNumber);
             this.backRowsNumber = backRowsNumber;
     }
 

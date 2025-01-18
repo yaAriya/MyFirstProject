@@ -11,13 +11,22 @@ public class Transport {
     private String motorType;
     private int passengerSeatsNumber;
 
-    public Transport (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber){
+    public Transport (int ID, int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber){
+        this.ID = ID;
         this.wheelsNumber = wheelsNumber;
         this.power = power;
         this.color = color;
         this.brand = brand;
         this.motorType = motorType;
         this.passengerSeatsNumber = passengerSeatsNumber;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public int getWheelsNumber(){
@@ -82,7 +91,7 @@ public class Transport {
 
     @Override
     public int hashCode(){
-        return Objects.hash(wheelsNumber,power, color, brand, motorType, passengerSeatsNumber);
+        return Objects.hash(ID,wheelsNumber,power, color, brand, motorType, passengerSeatsNumber);
     }
 
     public boolean equals(Object obj){
@@ -90,11 +99,11 @@ public class Transport {
         if(obj == null || !(obj instanceof Transport)) return false;
         // if (obj == null ||obj.getClass() != this.getClass()) return false;
             Transport transport = (Transport) obj;
-        return wheelsNumber == transport.wheelsNumber && power == transport.power && Objects.equals(color, transport.color) && Objects.equals(brand, transport.brand) && Objects.equals(motorType,transport.motorType) && passengerSeatsNumber == transport.passengerSeatsNumber;
+        return ID == transport.ID &&  wheelsNumber == transport.wheelsNumber && power == transport.power && Objects.equals(color, transport.color) && Objects.equals(brand, transport.brand) && Objects.equals(motorType,transport.motorType) && passengerSeatsNumber == transport.passengerSeatsNumber;
     }
 
     @Override
     public String toString(){
-        return wheelsNumber + "," + power + "," + color + "," + brand + "," + motorType + "," + passengerSeatsNumber;
+        return ID + "," + wheelsNumber + "," + power + "," + color + "," + brand + "," + motorType + "," + passengerSeatsNumber;
     }
 }

@@ -5,8 +5,8 @@ import java.util.Objects;
 public class Car extends Transport {
     private  int stopSignalsNumber;
 
-    public Car (int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber){
-        super(wheelsNumber, power, color, brand, motorType, passengerSeatsNumber);
+    public Car (int ID, int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber){
+        super(ID, wheelsNumber, power, color, brand, motorType, passengerSeatsNumber);
         this.stopSignalsNumber = stopSignalsNumber;
     }
 

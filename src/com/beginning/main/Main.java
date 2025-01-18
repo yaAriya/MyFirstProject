@@ -10,6 +10,8 @@ import com.beginning.comporator.MinCarPowerComparator;
 
 import com.beginning.entity.Plane;
 
+import com.beginning.searchEngine.SearchEngine;
+
 import com.beginning.printer.Printer;
 
 import com.beginning.entity.Car;
@@ -19,6 +21,7 @@ import com.beginning.initializer.TransportInitializer;
 import java.util.Comparator;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
@@ -47,18 +50,24 @@ public class Main {
         List<Transport> firstTransportShowroom = transportInitializer.initializerTransport();
         Printer.printFirstTransportShowroom(firstTransportShowroom);
 
-        //Car theFirstCar = new Car(4, 200,"Blue","Lada","petrol",4, 2);
-        //Transport theFirstTransport = new Transport(4,400,"White","Lada", "petrol", 8);
-
-        /*if(firstCar.equals(firstTransport)){
-            System.out.println("Equal");
-        } else{
-            System.out.println("Not equal");
+        int IDOfObject = 134;
+        int resultForTransport = SearchEngine.findIndexOfObjectFromTransport(firstTransportShowroom, IDOfObject);
+        if(resultForTransport>-1){
+            System.out.println(firstTransportShowroom.get(resultForTransport));
+        } else {
+            System.out.println("Среди транспортов такого объекта нет");
+            int resultForCars = SearchEngine.findIndexOfObjectFromCars(firstCarShowroom, IDOfObject);
+            if (resultForCars > -1) {
+                System.out.println(firstCarShowroom.get(resultForCars));
+            } else {
+                System.out.println("Среди машин такого объекта нет");
+                int resultForPlanes = SearchEngine.findIndexOfObjectFromPlanes(firstPlaneShowroom, IDOfObject);
+                if (resultForPlanes > -1) {
+                    System.out.println(firstPlaneShowroom.get(resultForPlanes));
+                } else {
+                    System.out.println("Среди самолетов такого объекта нет");
+                }
+            }
         }
-        System.out.println((firstCar.equals(firstTransport)));
-    }
-        //Printer.printComparingFirstCarAndFirstTransport(firstCarShowroom,firstTransportShowroom);
-        firstTransport.equals(firstCar);
-    }*/
     }
 }

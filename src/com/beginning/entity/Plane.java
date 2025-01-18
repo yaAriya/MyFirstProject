@@ -7,8 +7,8 @@ public class Plane extends Transport implements Cloneable {
     private int portholeNumber;
     private int flapsNumber;
 
-    public Plane (int wheelsNumber, int power, String color, String  brand, String motorType, int passengerSeatsNumber, int wingsNumber, int portholeNumber, int flapsNumber){
-        super(wheelsNumber, power, color, brand, motorType, passengerSeatsNumber);
+    public Plane (int ID, int wheelsNumber, int power, String color, String  brand, String motorType, int passengerSeatsNumber, int wingsNumber, int portholeNumber, int flapsNumber){
+        super(ID, wheelsNumber, power, color, brand, motorType, passengerSeatsNumber);
         this.wingsNumber = wingsNumber;
         this.portholeNumber = portholeNumber;
         this.flapsNumber = flapsNumber;
@@ -70,5 +70,4 @@ public class Plane extends Transport implements Cloneable {
     public String toString(){
         return super.toString() + ", " + wingsNumber + "," + portholeNumber + "," + flapsNumber + ".";
     }
-
 }

@@ -7,8 +7,8 @@ import java.util.Objects;
 public class Truck extends Car {
     private int vehicleBody;
 
-    public Truck(int wheelsNumber, int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber, int vehicleBody) {
-        super(wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, stopSignalsNumber);
+    public Truck(int ID, int wheelsNumber, int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber, int vehicleBody) {
+        super(ID, wheelsNumber, power, color, brand, motorType, passengerSeatsNumber, stopSignalsNumber);
             this.vehicleBody = vehicleBody;
     }
 

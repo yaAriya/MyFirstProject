@@ -61,13 +61,3 @@ public class Printer {
         }
     }
 }
-/* private static final String ComparingFirstCarAndFirstTransport = "Сравнение выбранных вами объектов: ";
-
-    public static void printComparingFirstCarAndFirstTransport(List<Car> firstCarShowroom, List<Transport> firstTransportShowroom) {
-        if(firstCar.equals(firstTransport)){
-            System.out.println("Equal");
-        } else{
-            System.out.println("Not equal");
-        }
-        System.out.println((firstCar.equals(firstTransport)));
-    }*/
