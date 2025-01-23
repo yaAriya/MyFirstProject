@@ -52,8 +52,6 @@ public class Main {
         Printer.printFirstTransportShowroom(firstTransportShowroom);
 
         Scanner scanner = new Scanner(System.in);
-        //int IDOfFirstObjectByUser = scanner.nextInt();//134
-        //int IDOfSecondObjectByUser = scanner.nextInt();// 245
         int[] IDOfObjectsByUser = new int[2];// Подумать как вписать кол-во вызовов nextInt
         System.out.println("Введите ID первого объекта, который Вы бы хотели сравнить");
         int IDOfFirstObjectByUser = scanner.nextInt();
