@@ -38,16 +38,12 @@ public class TransportInitializer implements Cloneable {
 
         Plane firstPlane = new Plane(9603, 2, 390, "white", "Belavia", "petrol", 40, 2, 4, 4 );
         Plane secondPlane =  new Plane(247, 3, 360, "blue", "Belavia", "petrol", 45, 2, 4, 4 );
-        Plane thirdPlane = secondPlane.clone();
+        Plane thirdPlane = (Plane) secondPlane.clone();
 
         firstPlaneShowroom.add(firstPlane);
         firstPlaneShowroom.add(secondPlane);
         firstPlaneShowroom.add(thirdPlane);
 
             return firstPlaneShowroom;
-    }
-
-    protected Object clone() throws CloneNotSupportedException{
-        return super.clone();
     }
 }

@@ -4,7 +4,7 @@ import com.beginning.entity.Car;
 
 import java.util.Objects;
 
-public class PassengerCar extends Car {
+public class PassengerCar extends Car implements Cloneable{
         private int backRowsNumber;
 
     public PassengerCar (int ID, int wheelsNumber,int power, String color, String  brand, String motorType, int passengerSeatsNumber, int stopSignalsNumber, int backRowsNumber){
@@ -30,6 +30,11 @@ public class PassengerCar extends Car {
         if(!(obj instanceof PassengerCar)) return false;
         PassengerCar passengerCar = (PassengerCar) obj;
         return super.equals(obj) && backRowsNumber == passengerCar.backRowsNumber;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override

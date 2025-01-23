@@ -50,10 +50,6 @@ public class Plane extends Transport implements Cloneable {
         }
     }
 
-    public Plane clone() throws CloneNotSupportedException{ //protected
-        return (Plane) super.clone();
-    }
-
     @Override
    public int hashCode(){
         return Objects.hash(super.hashCode(),wingsNumber,portholeNumber,flapsNumber);
@@ -64,6 +60,11 @@ public class Plane extends Transport implements Cloneable {
         if(obj instanceof Plane) return false;
         Plane plane = (Plane) obj;
         return  super.equals(obj) && wingsNumber == plane.wingsNumber && portholeNumber == plane.portholeNumber && flapsNumber == plane.flapsNumber;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 
     @Override

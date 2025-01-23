@@ -1,8 +1,9 @@
 package com.beginning.entity;
 
+import javax.security.auth.login.AccountLockedException;
 import java.util.Objects;
 
-public class Transport {
+public class Transport implements Cloneable{
     private int ID;
     private int wheelsNumber;
     private int power;
@@ -101,6 +102,13 @@ public class Transport {
             Transport transport = (Transport) obj;
         return ID == transport.ID &&  wheelsNumber == transport.wheelsNumber && power == transport.power && Objects.equals(color, transport.color) && Objects.equals(brand, transport.brand) && Objects.equals(motorType,transport.motorType) && passengerSeatsNumber == transport.passengerSeatsNumber;
     }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+
+
 
     @Override
     public String toString(){

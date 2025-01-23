@@ -52,6 +52,11 @@ public class MilitaryAirplane extends Plane {
     }
 
     @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+
+    @Override
     public String toString(){
         return super.toString() + ", " + gunsNumber + ", " + missilesNumber;
     }
