@@ -10,6 +10,9 @@ import com.beginning.comporator.MinCarPowerComparator;
 
 import com.beginning.entity.Plane;
 
+import com.beginning.searchEngine.FindObjectFromCars;
+import com.beginning.searchEngine.FindObjectFromPlanes;
+import com.beginning.searchEngine.FindObjectFromTransport;
 import com.beginning.searchEngine.SearchEngine;
 
 import com.beginning.printer.Printer;
@@ -21,6 +24,7 @@ import com.beginning.initializer.TransportInitializer;
 import java.util.Comparator;
 
 import java.util.List;
+
 import java.util.Scanner;
 
 public class Main {
@@ -51,27 +55,19 @@ public class Main {
         Printer.printFirstTransportShowroom(firstTransportShowroom);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите ID объекта");
-        int IDOfObjectByUser = scanner.nextInt(); //134
+        int[] IDOfObjectsByUser = new int[2];// Подумать как вписать кол-во вызовов nextInt
+        System.out.println("Введите ID первого объекта, который Вы бы хотели сравнить");
+        int IDOfFirstObjectByUser = scanner.nextInt();
+        IDOfObjectsByUser [0] = IDOfFirstObjectByUser ;
+        System.out.println("Введите ID второго объекта, который Вы бы хотели сравнить");
+        int IDOfSecondObjectByUser = scanner.nextInt();
+        IDOfObjectsByUser [1] = IDOfSecondObjectByUser;
         scanner.close();
 
-        int resultForTransport = SearchEngine.findIndexOfObjectFromTransport(firstTransportShowroom, IDOfObjectByUser);
-        if(resultForTransport>-1){
-            System.out.println(firstTransportShowroom.get(resultForTransport));
-        } else {
-            System.out.println("Среди транспортов такого объекта нет");
-            int resultForCars = SearchEngine.findIndexOfObjectFromCars(firstCarShowroom, IDOfObjectByUser);
-            if (resultForCars > -1) {
-                System.out.println(firstCarShowroom.get(resultForCars));
-            } else {
-                System.out.println("Среди машин такого объекта нет");
-                int resultForPlanes = SearchEngine.findIndexOfObjectFromPlanes(firstPlaneShowroom, IDOfObjectByUser);
-                if (resultForPlanes > -1) {
-                    System.out.println(firstPlaneShowroom.get(resultForPlanes));
-                } else {
-                    System.out.println("Среди самолетов такого объекта нет");
-                }
-            }
-        }
+        SearchEngine.checkingPresenceOfFirstObjectByID(firstTransportShowroom, firstCarShowroom, firstPlaneShowroom, IDOfObjectsByUser,IDOfFirstObjectByUser,IDOfSecondObjectByUser);
+
+        FindObjectFromTransport.findObjectByIDFromTransport(firstTransportShowroom, IDOfFirstObjectByUser);
+        FindObjectFromCars.findObjectByIDFromCars(firstCarShowroom, IDOfFirstObjectByUser);
+        FindObjectFromPlanes.findObjectByIDFromPlanes(firstPlaneShowroom, IDOfFirstObjectByUser);
     }
 }

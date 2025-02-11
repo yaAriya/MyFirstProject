@@ -3,6 +3,7 @@ package com.beginning.printer;
 import com.beginning.entity.Plane;
 
 import com.beginning.entity.Car;
+
 import com.beginning.entity.Transport;
 
 import java.util.List;
@@ -16,6 +17,17 @@ public class Printer {
     private static final String carsFilteredByPowerMessage = "Сортировка машин по минимальной мощности с заданным параметром: Nᵒ%s: %s";
     private static final String firstTransportShowroomMessage = "Каталог салона транспортов: Nᵒ%s: %s";
 
+    /*public static void printComparingCarAndTransport(List<Car> firstCarShowroom, List<Transport> firstTransportShowroom) {
+        for (int i= 0; i<){
+            if (firstCar.equals(firstTransport)) {
+                System.out.println("Equal");
+            } else {
+                System.out.println("Not equal");
+            }
+        }
+        System.out.println((firstCar.equals(firstTransport)));
+    }
+*/
     public static void printFirstCarShowroom (List<Car> firstCarShowroom){
         printCars(firstCarShowroom, firstCarShowroomMessage);
     }
