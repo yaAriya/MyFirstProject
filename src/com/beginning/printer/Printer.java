@@ -5,6 +5,7 @@ import com.beginning.entity.Plane;
 import com.beginning.entity.Car;
 
 import com.beginning.entity.Transport;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.List;
 
@@ -16,6 +17,9 @@ public class Printer {
     private static final String carsFilteredByPassengerSeatsNumberMessage = "Сортировка машин по минимальному количеству сидений с заданным параметром: Nᵒ%s: %s";
     private static final String carsFilteredByPowerMessage = "Сортировка машин по минимальной мощности с заданным параметром: Nᵒ%s: %s";
     private static final String firstTransportShowroomMessage = "Каталог салона транспортов: Nᵒ%s: %s";
+    private static final String messageForFirstObjectByIDFromTransport = "Первый объект для сравнения - транспорт";
+    private static final String messageForFirstObjectByIDFromCar = "Первый объект для сравнения - машина";
+    private static final String messageForFirstObjectByIDFromPlane = "Первый объект для сравнения - самолет";
 
     /*public static void printComparingCarAndTransport(List<Car> firstCarShowroom, List<Transport> firstTransportShowroom) {
         for (int i= 0; i<){
@@ -56,6 +60,18 @@ public class Printer {
         printCars(carsFilteredByPower, carsFilteredByPowerMessage);
     }
 
+    public static void printFirstObjectByIDFromTransport(Transport searchResult){
+        printObjectFromTransport(searchResult,messageForFirstObjectByIDFromTransport);
+    }
+
+    public static void printFirstObjectByIDFromCar(Car searchResult){
+        printObjectFromCar(searchResult,messageForFirstObjectByIDFromCar);
+    }
+
+    public static void printFirstObjectByIDFromPlane(Plane searchResult){
+        printObjectFromPlane(searchResult,messageForFirstObjectByIDFromPlane);
+    }
+
     private static void printCars(List<Car> cars, String message){
         for (int i = 0; i < cars.size(); i++ ){
             System.out.println(String.format(message, i+1, cars.get(i)));
@@ -72,4 +88,17 @@ public class Printer {
             System.out.println(String.format(message, i+1, transports.get(i)));
         }
     }
+
+    private static void printObjectFromTransport(Transport searchResult, String messageForFirstObjectByIDFromTransport){
+        System.out.println(messageForFirstObjectByIDFromTransport + ": " + searchResult);
+    }
+
+    private static void printObjectFromCar(Car searchResult, String messageForFirstObjectByIDFromCar){
+        System.out.println(messageForFirstObjectByIDFromCar + ": " + searchResult);
+    }
+
+    private static void printObjectFromPlane(Plane searchResult, String messageForFirstObjectByIDFromPlane){
+        System.out.println(messageForFirstObjectByIDFromPlane + ": " + searchResult);
+    }
+
 }

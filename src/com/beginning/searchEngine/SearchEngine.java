@@ -13,12 +13,12 @@ import static com.beginning.searchEngine.FindObjectFromPlanes.findObjectByIDFrom
 import static com.beginning.searchEngine.FindObjectFromTransport.findObjectByIDFromTransport;
 
 public class SearchEngine {
-    private static final String messageForTransport = "Среди транспортов такого объекта нет";
-    private static final String messageForCar = "Среди машин такого объекта нет";
-    private static final String messageForPlane = "Среди самолетов нет вашего объекта";
+    // private static final String messageForTransport = "Среди транспортов такого объекта нет";
+    // private static final String messageForCar = "Среди машин такого объекта нет";
+    // private static final String messageForPlane = "Среди самолетов нет вашего объекта";
 
 
-     public static void checkingPresenceOfFirstObjectByID(List<Transport> firstTransportShowroom, List<Car> firstCarShowroom, List<Plane> firstPlaneShowroom,int[] IDOfObjectsByUser, int IDOfFirstObjectByUser, int IDOfSecondObjectByUser){
+   /*  public static void checkingPresenceOfFirstObjectByID(List<Transport> firstTransportShowroom, List<Car> firstCarShowroom, List<Plane> firstPlaneShowroom,int[] IDOfObjectsByUser, int IDOfFirstObjectByUser, int IDOfSecondObjectByUser){
         for(int i = 0; i<IDOfObjectsByUser.length; i++) {
             if (checkingPresenceOfObjectByIDFromTransport(firstTransportShowroom, IDOfObjectsByUser[i], messageForTransport) == 1) {
             } else {
@@ -29,37 +29,34 @@ public class SearchEngine {
                 }
             }
         }
-     }
+     } */
 
-     public static int  checkingPresenceOfObjectByIDFromTransport(List<Transport> transports, int IDOfObjectByUser, String message) {
+     public static Transport checkingPresenceOfObjectByIDFromTransport(List<Transport> transports, int IDOfObjectByUser) {
          Transport firstResultForTransport = findObjectByIDFromTransport(transports, IDOfObjectByUser);
          if (firstResultForTransport != null) {
-             System.out.println(firstResultForTransport);
-                return 1;
+            // System.out.println(firstResultForTransport);
+                return firstResultForTransport;
          } else {
-             System.out.println(message);
-            return -1;
+            return null;
          }
      }
-         public static int checkingPresenceOfObjectByIDFromCar(List<Car> cars, int IDOfObjectByUser, String message) {
+         public static Car checkingPresenceOfObjectByIDFromCar(List<Car> cars, int IDOfObjectByUser) {
              Car firstResultForCar = findObjectByIDFromCars(cars, IDOfObjectByUser);
              if (firstResultForCar != null) {
-                 System.out.println(firstResultForCar);
-                 return 1;
+                // System.out.println(firstResultForCar);
+                 return firstResultForCar;
              } else {
-                 System.out.println(message);
-                return -1;
+                return null;
              }
          }
 
-         public static int checkingPresenceOfObjectByIDFromPlane(List<Plane> planes, int IDOfObjectByUser, String message){
+         public static Plane checkingPresenceOfObjectByIDFromPlane(List<Plane> planes, int IDOfObjectByUser){
              Plane firstResultForPlanes = findObjectByIDFromPlanes(planes, IDOfObjectByUser);
              if (firstResultForPlanes != null) {
-                 System.out.println(firstResultForPlanes);
-                 return 1;
+                // System.out.println(firstResultForPlanes);
+                 return firstResultForPlanes;
              } else {
-                 System.out.println(message);
-                 return -1;
+                 return null;
              }
          }
      }

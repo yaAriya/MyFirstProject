@@ -16,6 +16,7 @@ public class TransportInitializer implements Cloneable {
 
         Transport firstTransport = new Transport(245, 4, 87, "black", "Audi", "petrol", 5);
 
+        firstTransportShowroom.add(firstTransport);
         return firstTransportShowroom;
     }
 

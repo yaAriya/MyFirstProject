@@ -10,9 +10,6 @@ import com.beginning.comporator.MinCarPowerComparator;
 
 import com.beginning.entity.Plane;
 
-import com.beginning.searchEngine.FindObjectFromCars;
-import com.beginning.searchEngine.FindObjectFromPlanes;
-import com.beginning.searchEngine.FindObjectFromTransport;
 import com.beginning.searchEngine.SearchEngine;
 
 import com.beginning.printer.Printer;
@@ -55,19 +52,28 @@ public class Main {
         Printer.printFirstTransportShowroom(firstTransportShowroom);
 
         Scanner scanner = new Scanner(System.in);
-        int[] IDOfObjectsByUser = new int[2];// Подумать как вписать кол-во вызовов nextInt
+      // int[] IDOfObjectsByUser = new int[2];// Подумать как вписать кол-во вызовов nextInt
         System.out.println("Введите ID первого объекта, который Вы бы хотели сравнить");
         int IDOfFirstObjectByUser = scanner.nextInt();
-        IDOfObjectsByUser [0] = IDOfFirstObjectByUser ;
+       // IDOfObjectsByUser[0] = IDOfFirstObjectByUser;
         System.out.println("Введите ID второго объекта, который Вы бы хотели сравнить");
         int IDOfSecondObjectByUser = scanner.nextInt();
-        IDOfObjectsByUser [1] = IDOfSecondObjectByUser;
+       // IDOfObjectsByUser[1] = IDOfSecondObjectByUser;
         scanner.close();
 
-        SearchEngine.checkingPresenceOfFirstObjectByID(firstTransportShowroom, firstCarShowroom, firstPlaneShowroom, IDOfObjectsByUser,IDOfFirstObjectByUser,IDOfSecondObjectByUser);
 
-        FindObjectFromTransport.findObjectByIDFromTransport(firstTransportShowroom, IDOfFirstObjectByUser);
-        FindObjectFromCars.findObjectByIDFromCars(firstCarShowroom, IDOfFirstObjectByUser);
-        FindObjectFromPlanes.findObjectByIDFromPlanes(firstPlaneShowroom, IDOfFirstObjectByUser);
+        if (SearchEngine.checkingPresenceOfObjectByIDFromTransport(firstTransportShowroom, IDOfFirstObjectByUser) != null) {
+            Printer.printFirstObjectByIDFromTransport(SearchEngine.checkingPresenceOfObjectByIDFromTransport(firstTransportShowroom, IDOfFirstObjectByUser));// вызываем печатник и передаем туда объект найденный нами + сообщение из поисковика
+        } else {
+            if (SearchEngine.checkingPresenceOfObjectByIDFromCar(firstCarShowroom, IDOfFirstObjectByUser) != null) {
+                Printer.printFirstObjectByIDFromCar(SearchEngine.checkingPresenceOfObjectByIDFromCar(firstCarShowroom, IDOfFirstObjectByUser));
+            } else {
+                if (SearchEngine.checkingPresenceOfObjectByIDFromPlane(firstPlaneShowroom, IDOfFirstObjectByUser) != null) {
+                    Printer.printFirstObjectByIDFromPlane(SearchEngine.checkingPresenceOfObjectByIDFromPlane(firstPlaneShowroom, IDOfFirstObjectByUser));
+                } else {
+                    System.out.println("Увы объект по вашему ID не найден");
+                }
+            }
+        }
     }
 }
